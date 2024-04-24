@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Install newman
-      - uses: npm install -g newman
+        uses: npm install -g newman
 
       - name: Run newman
-      - uses: newman run Booking.postman_collection.json
+        uses: newman run Booking.postman_collection.json
         
