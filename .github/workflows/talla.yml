@@ -13,4 +13,7 @@ jobs:
 
       - name: Installer newman
       - uses: npm install -g newman
+
+      - name: Runner newman
+      - uses: newman run Booking.postman_collection.json
         
