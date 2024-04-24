@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install newman
-      - run: npm install -g newman
+      - uses: npm install -g newman
 
       - name: Run newman
-      - run: newman run Booking.postman_collection.json
+      - uses: newman run Booking.postman_collection.json
         
