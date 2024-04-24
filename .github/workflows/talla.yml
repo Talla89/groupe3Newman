@@ -1,0 +1,16 @@
+name: Postman test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  execute-tests-postman:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le code
+      - uses: actions/checkout@v4
+
+      - name: Installer newman
+      - uses: npm install -g newman
+        
