@@ -1,18 +1,20 @@
 name: Postman test
 
 on: 
-  push
+  push:
+  workflow_dispatch
+
 
 jobs:
   execute-tests-postman:
     runs-on: ubuntu-latest
     steps:
-      - name: Recuperer le code
+      - name: Check out repository code
       - uses: actions/checkout@v4
 
-      - name: Installer newman
+      - name: Install newman
       - run: npm install -g newman
 
-      - name: Runner newman
+      - name: Run newman
       - run: newman run Booking.postman_collection.json
         
